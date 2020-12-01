@@ -62,7 +62,7 @@ namespace NotionBase
                     break;
                 case 3:
                     //code block
-                    Console.WriteLine("ex 3");
+                    Calculator.calculate();
                     break;
                 case 4:
                     //code block
