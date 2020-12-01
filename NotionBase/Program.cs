@@ -32,7 +32,7 @@ namespace NotionBase
                 "\r\n [ 1 ] Varibales" +
                 "\r\n [ 2 ] Les boucles " +
                 "\r\n [ 3 ] Les fonctions et les Conditions " +
-                "\r\n [ 1 ] Les collections "
+                "\r\n [ 4 ] Les collections "
                 );
             int Exercice = Convert.ToInt32(Console.ReadLine());
             switch (Exercice)
@@ -61,12 +61,12 @@ namespace NotionBase
 
                     break;
                 case 3:
-                    //code block
+                    //calculator
                     Calculator.calculate();
                     break;
                 case 4:
-                    //code block
-                    Console.WriteLine("ex 3");
+                    //first question
+                    Collections.firstQ();
                     break;
                 default:
                     //code block

@@ -22,7 +22,7 @@ namespace NotionBase
             {
                 Console.WriteLine("Calculator started : \r\n" +
                 "______________________\r\n" +
-                "choose an operation\r\n"
+                "choose an operation (+, *, -, or /)\r\n"
                 );
                 String operation = Console.ReadLine();
                 TakeInput();
