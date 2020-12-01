@@ -8,38 +8,73 @@ namespace NotionBase
 {
     class Program
     {
-        private static decimal price;
-        private static decimal percentage;
-        private static decimal finalePrice;
+        
 
         static void Main(string[] args)
         {
-            //getting Price value
-            Console.WriteLine("Entre Price of item: ");
-            string price = Console.ReadLine();
-            //getting Percentage value
-            Console.WriteLine("Entre Percentage of item");
-            string percentage = Console.ReadLine();
-            //Calculate TTC
-            TaxCalculator(price, percentage);
-            //Display Message
-            GetMsg();
+
+            //run our console app
+            Run();
 
         }
 
-        public static void TaxCalculator(string inputPrice, string taxRate)
+
+        public static void Run()
         {
-            price = decimal.Parse(inputPrice);
-            percentage = decimal.Parse(taxRate) / 100;
-            finalePrice = price + (price * percentage);
+            /**
+             * We have 4 exercices, we are going to ask the user 
+             * which one he would like to test
+             */
 
+            //Display the user options
+            Console.WriteLine("" +
+                "Choose which exercice you want to see :" +
+                "\r\n [ 1 ] Varibales" +
+                "\r\n [ 2 ] Les boucles " +
+                "\r\n [ 3 ] Les fonctions et les Conditions " +
+                "\r\n [ 1 ] Les collections "
+                );
+            int Exercice = Convert.ToInt32(Console.ReadLine());
+            switch (Exercice)
+            {
+                case 1:
+                    //Take user input
+                    Variables.UserInputs();
+                    //Calculate TTC
+                    Variables.TaxCalculator();
+                    //Display Message
+                    Variables.GetMsg();
+                    break;
+                case 2:
+                    //Execute First Loop
+                    Boucles.Firstloop();
+                    //Execute Second loop
+                    Boucles.SecondLoop();
+                    //Execute Third Loop
+                    Boucles.ThirdLoop();
+                    //Execute Fourth Loop
+                    Boucles.FourthLoop();
+                    //Execute Fifth Loop
+                    Boucles.FifthLoop();
+                    //Execute Sixth Loop
+                    Boucles.SixthLoop();
+
+                    break;
+                case 3:
+                    //code block
+                    Console.WriteLine("ex 3");
+                    break;
+                case 4:
+                    //code block
+                    Console.WriteLine("ex 3");
+                    break;
+                default:
+                    //code block
+                    Console.WriteLine("There was an Error please choose one of the above choices:");
+                    Run();
+                    break;
+            }
         }
-
-        public static void GetMsg()
-        {
-            Console.WriteLine(string.Format("Initial price: {0} dh, \r\n  After Tax Price:{1} dg", price, finalePrice));
-        }
-
 
 
 
