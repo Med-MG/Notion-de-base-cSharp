@@ -20,11 +20,9 @@ namespace NotionBase
             //getting Percentage value
             Console.WriteLine("Entre Percentage of item");
             string percentage = Console.ReadLine();
-
-            //var finalePrice = decimal.Parse(price) + (decimal.Parse(price) * (decimal.Parse(percentage) / 100));
-
-            //Console.WriteLine(string.Format("Initial price: {0} dh, \r\n After Tax Price:{1} dh", price, finalePrice));
+            //Calculate TTC
             TaxCalculator(price, percentage);
+            //Display Message
             GetMsg();
 
         }
