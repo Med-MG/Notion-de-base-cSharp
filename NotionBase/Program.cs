@@ -66,7 +66,7 @@ namespace NotionBase
                     break;
                 case 4:
                     //first question
-                    Collections.firstQ();
+                    Collections.CollectionQ();
                     break;
                 default:
                     //code block

@@ -8,7 +8,7 @@ namespace NotionBase
 {
     class Collections
     {
-        public static void firstQ()
+        public static void CollectionQ()
         {
             var months = new List<string> { "January", "February" , "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
             //question 1 output
